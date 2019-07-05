@@ -11,9 +11,9 @@ from Typhoon.items import UDNItem
 class UdnSpider(CrawlSpider):
     name = 'udn'
     allowed_domains = ['udn.com']
-    start_urls = ['https://www.google.com.tw/search?q=%E7%91%AA%E8%8E%89%E4%BA%9E+%E9%A2%B1%E9%A2%A8+site:udn.com&tbs=cdr:1,cd_min:1/1/2018,cd_max:10/31/2018&ei=AQofXc_APMvdmAXtg4GQBA&start=40&sa=N&ved=0ahUKEwiPxdPzrZ3jAhXLLqYKHe1BAEI4HhDy0wMIfw&biw=1440&bih=716',]
+    start_urls = ['https://www.google.com.tw/search?q=%E9%A2%B1%E9%A2%A8+site:udn.com&tbs=cdr:1,cd_min:1/1/2018,cd_max:10/31/2018&ei=SAgfXfAboYqvvA-JrZKYBw&start=0&sa=N&ved=0ahUKEwjw3_KgrJ3jAhUhxYsBHYmWBHM4ChDy0wMIfg&biw=1440&bih=716&num=200',]
     # rules = [
-    Rule(LinkExtractor(allow=('https://www.google.com.tw/search?q=%E9%A2%B1%E9%A2%A8+site:udn.com&tbs=cdr:1,cd_min:1/1/2018,cd_max:10/31/2018.*')),  # 'https://www.google.com.tw/.*'
+    Rule(LinkExtractor(allow=('https://www.google.com.tw/search?q=%E9%A2%B1%E9%A2%A8+site:udn.com&tbs=cdr:1,cd_min:1/1/2018,cd_max:10/31/2018&.*')),  # 'https://www.google.com.tw/.*'
          callback='parse', follow=True)
     # ]
 

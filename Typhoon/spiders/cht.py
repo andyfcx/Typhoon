@@ -9,9 +9,9 @@ from Typhoon.items import CHTItem
 class ChinatimesSpider(CrawlSpider):
     name = 'cht'
     allowed_domains = ['www.chinatimes.com']
-    start_urls = ['https://www.google.com.tw/search?q=%E9%A2%B1%E9%A2%A8+site:www.chinatimes.com&tbs=cdr:1,cd_min:1/1/2018,cd_max:10/31/2018&ei=yvQeXaGWKor48QXclKSQAQ&start=70&sa=N&ved=0ahUKEwiho-fVmZ3jAhUKfLwKHVwKCRI4UBDx0wMIdA&biw=1440&bih=716']
+    start_urls = ['https://www.google.com.tw/search?q=%E9%A2%B1%E9%A2%A8+site:www.chinatimes.com&tbs=cdr:1,cd_min:1/1/2018,cd_max:10/31/2018&ei=yvQeXaGWKor48QXclKSQAQ&start=70&sa=N&ved=0ahUKEwiho-fVmZ3jAhUKfLwKHVwKCRI4UBDx0wMIdA&biw=1440&bih=716&num=100']
     rules = [
-        Rule(LinkExtractor(allow='https://www.google.com.tw/.*'),
+        Rule(LinkExtractor(allow='https://www.google.com.tw/search?q=%E9%A2%B1%E9%A2%A8+site:www.chinatimes.com&tbs=cdr:1,cd_min:1/1/2018,cd_max:10/31/2018&.*'),
              callback='parse', follow=True),
     ]
 
